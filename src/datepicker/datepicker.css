@@ -1,0 +1,249 @@
+.date-picker-container {
+  width: 344px;
+  background-color: #ffffff;
+  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.19), 0 0 6px 0 rgba(0, 0, 0, 0.26);
+  text-align: right;
+  font-family: "almoni-dl";
+  color: #636365;
+  margin: 0 auto;
+  margin-top: 20px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.date-picker-container .wrap {
+  padding: 37px 32px 16px 32px;
+  position: relative;
+}
+.date-picker-container .wrap .remarks {
+  margin-top: 50px;
+  font-size: 12px;
+  color: #636365;
+  font-weight: bold;
+}
+.date-picker-container .wrap .remarks .remarks-item-1,
+.date-picker-container .wrap .remarks .remarks-item-2 {
+  padding-right: 25px;
+  position: relative;
+  line-height: 14px;
+  margin-top: 5px;
+}
+.date-picker-container .wrap .remarks .remarks-item-1::before,
+.date-picker-container .wrap .remarks .remarks-item-2::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #d8eaea;
+}
+.date-picker-container .wrap .remarks .remarks-item-2::before {
+  background-color: #ffe9f1;
+}
+.date-picker-container .btn-close {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  line-height: 0;
+  cursor: pointer;
+  display: block;
+  color: #afafb0;
+  opacity: 0.42;
+  -webkit-transition: opacity 0.5s ease;
+}
+.date-picker-container .btn-close::before {
+  font-size: 26px;
+  content: "\D7";
+  font-weight: normal;
+  font-family: serif;
+  line-height: 0;
+  display: block;
+}
+.date-picker-container .btn-close:hover {
+  opacity: 1;
+}
+.date-picker-container .calender-wrapper {
+  width: 280px;
+}
+.date-picker-container .calender-wrapper .cal-title {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-bottom: 15px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .btn-month-change {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  position: relative;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .prev::after {
+  display: block;
+  position: absolute;
+  content: '';
+  border: 2px solid #636365;
+  border-top: none;
+  border-right: none;
+  width: 8px;
+  height: 8px;
+  top: 10px;
+  right: 11px;
+  transform: rotate(-135deg);
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .next::after {
+  display: block;
+  position: absolute;
+  content: '';
+  border: 2px solid #636365;
+  border-top: none;
+  border-right: none;
+  width: 8px;
+  height: 8px;
+  top: 10px;
+  right: 7px;
+  transform: rotate(45deg);
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .disabled {
+  cursor: default;
+  border-color: #f0f0f0;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .disabled::after {
+  border-color: #f0f0f0;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown {
+  z-index: 50;
+  width: 176px;
+  height: 31px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .selected {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #999999;
+  margin: 0 8px 0 24px;
+  padding-top: 8px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .arrow {
+  margin-left: 10px;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #000000 transparent transparent transparent;
+  opacity: 0.54;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .arrow.arrow-up {
+  border-width: 0 4px 4px 4px;
+  border-color: transparent transparent #000000 transparent;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options {
+  height: 300px;
+  background-color: #fafafa;
+  border-radius: 2px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12);
+  margin-top: -2px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  direction: rtl;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul::-webkit-scrollbar-track {
+  box-shadow: 1px 0 0 0 #EDEDED;
+  margin-top: 3px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul::-webkit-scrollbar {
+  width: 8px;
+  margin-top: 10px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul::-webkit-scrollbar-thumb {
+  background-color: #C1C1C1;
+  border-radius: 5px;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul::-webkit-scrollbar-thumb:hover {
+  background: #a1a2a6;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul li {
+  height: 27px;
+  line-height: 27px;
+  padding: 0 7px 0 7px;
+  display: block;
+  font-size: 15px;
+  color: rgba(99, 99, 101, 0.87);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.date-picker-container .calender-wrapper .cal-body .month-picker .dropdown .options ul li:hover {
+  background-color: #e4edf2;
+  color: #2079a6;
+}
+.date-picker-container .calender-wrapper .cal-body .cal-month .month-header {
+  font-size: 14px;
+  font-weight: 700;
+  color: #9e9e9e;
+  direction: rtl;
+  display: flex;
+}
+.date-picker-container .calender-wrapper .cal-body .cal-month .month-header .day {
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  margin: 0 3px 0 3px;
+}
+.date-picker-container .calender-wrapper .cal-body .cal-month .month-week {
+  font-size: 12px;
+  color: #dbdcdb;
+  margin-bottom: 4px;
+  direction: rtl;
+  display: flex;
+  font-family: "Open Sans", Arial, serif;
+}
+.date-picker-container .calender-wrapper .cal-body .cal-month .month-week .day {
+  width: 33px;
+  height: 33px;
+  margin: 0 3px 0 3px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.date-picker-container .calender-wrapper .cal-body .cal-month .month-week .day.available {
+  cursor: pointer;
+  background-color: #D8EAEA;
+  color: #25867D;
+}
+.date-picker-container .calender-wrapper .cal-body .cal-month .month-week .day.available:hover {
+  background-color: #25867D;
+  color: #ffffff;
+}

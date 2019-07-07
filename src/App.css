@@ -1,0 +1,52 @@
+@font-face{
+	font-family:'almoni-dl';
+	font-weight:400; /*(regular)*/
+	font-style: normal;
+	src: url('./fonts/almoni-dl-aaa-400.eot');
+	src: url('./fonts/almoni-dl-aaa-400.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/almoni-dl-aaa-400.ttf') format('truetype'),
+	url('./fonts/almoni-dl-aaa-400.woff') format('woff');
+}
+@font-face{
+	font-family:'almoni-dl';
+	font-weight:700; /*(bold)*/
+	font-style: normal;
+	src: url('./fonts/almoni-dl-aaa-700.eot');
+	src: url('./fonts/almoni-dl-aaa-700.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/almoni-dl-aaa-700.ttf') format('truetype'),
+	url('./fonts/almoni-dl-aaa-700.woff') format('woff');
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
